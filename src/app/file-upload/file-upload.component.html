@@ -1,0 +1,16 @@
+
+<div  align="center" class="container form-group"> 
+    <h1>File Upload</h1>
+    <input type="file" (change)="onFileSelected($event)">
+    <button class="btn btn-primary" type="button" (click)="onUpload()">Upload</button>
+</div>
+
+<div *ngIf="check" align="center" class="container form-group">
+    <div *ngFor="let message of uploadMessage">
+        <h2>{{ message }}</h2>
+    </div>
+</div>
+
+<div>
+    <a href="http://localhost:8023/downloadFile/89" class="button" target="_blank">Education form</a>
+</div>
